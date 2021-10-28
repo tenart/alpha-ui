@@ -27,5 +27,8 @@ The build is minified and the filenames include the hashes.\
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-> Written with [StackEdit](https://stackedit.io/).
+#
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Written with [StackEdit](https://stackedit.io/).
