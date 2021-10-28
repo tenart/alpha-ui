@@ -1,5 +1,5 @@
 /* Set default text color */
-div, p {
+div {
     @apply 
     text-gray-600;
 }
@@ -33,7 +33,7 @@ div, p {
 }
 .button:disabled {
     @apply
-    opacity-90
+    opacity-75
     cursor-not-allowed;
 }
 .button.has-icon {

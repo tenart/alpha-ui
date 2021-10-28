@@ -61,12 +61,13 @@ const AuthView = (props) => {
             </Banner>
             <div className="bg-gray-100 absolute h-full w-full flex flex-col items-center justify-center">
 
-                <div className="bg-white w-80 rounded-md p-6 shadow-lg">
+                <div className="bg-white w-80 rounded-md p-5 shadow-lg">
                     <div className="h-10"/>
                     <div className="flex justify-center">
                         <img src="assets/unc-health-logo.svg" className="w-36"/>
                     </div>
                     <div className="h-10"/>
+                    <div className="h-5"/>
                     <TextBox 
                         icon={FaUserAlt}
                         className="w-full"
@@ -74,7 +75,7 @@ const AuthView = (props) => {
                         placeholder="username" 
                         onChange={onUsernameChange}
                     />
-                    <div className="h-3"/>
+                    <div className="h-2"/>
                     <TextBox 
                         icon={FaLock}
                         className="w-full"
@@ -82,7 +83,7 @@ const AuthView = (props) => {
                         placeholder="password" 
                         onChange={onPasswordChange}
                     />
-                    <div className="h-6"/>
+                    <div className="h-5"/>
                     {loading ? 
                         <div className="w-full flex justify-center items-center h-10">
                             <LoadingSpinner/>
@@ -96,7 +97,7 @@ const AuthView = (props) => {
                             LOG IN
                         </Button>
                     }
-                    <div className="h-4"/>
+                    <div className="h-2"/>
                     <div className="text-center">
                         <p className="text-sm underline text-theme hover:text-carolina cursor-pointer">Forgot Password?</p>
                     </div>
