@@ -1,14 +1,16 @@
-import { Link as RDLink, useHistory } from "react-router-dom"
-import { useState, useRef } from "react";
-
-import Button from "../components/Button";
-import InputText from "../components/InputText";
-import LoadingSpinner from "../components/LoadingSpinner";
-
-import { FaUserAlt, FaLock } from "react-icons/fa";
-
-import api from "../api";
+// Import major dependencies
+import { useHistory } from "react-router-dom"
+import { useState } from "react";
+import { Helmet } from 'react-helmet';
+// Import components
 import Banner from "../components/Banner";
+import Button from "../components/Button";
+import TextBox from "../components/TextBox";
+import LoadingSpinner from "../components/LoadingSpinner";
+// Import icons
+import { FaUserAlt, FaLock, FaChevronRight } from "react-icons/fa";
+// Import API
+import api from "../api";
 
 const AuthView = (props) => {
 
@@ -50,25 +52,32 @@ const AuthView = (props) => {
     }
 
     return(
-        <>
+        <>  
+            <Helmet>
+                <title>SIMP | Log In</title>
+            </Helmet>
             <Banner show={showError}>
                 Invalid username/password. Please try again.
             </Banner>
             <div className="bg-gray-100 absolute h-full w-full flex flex-col items-center justify-center">
-                <div className="bg-white w-80 rounded-md p-6 pt-10 shadow-lg">
+
+                <div className="bg-white w-80 rounded-md p-6 shadow-lg">
+                    <div className="h-10"/>
                     <div className="flex justify-center">
                         <img src="assets/unc-health-logo.svg" className="w-36"/>
                     </div>
                     <div className="h-10"/>
-                    <InputText 
+                    <TextBox 
                         icon={FaUserAlt}
-                        type="text" 
+                        className="w-full"
+                        type="text"
                         placeholder="username" 
                         onChange={onUsernameChange}
                     />
-                    <div className="h-4"/>
-                    <InputText 
+                    <div className="h-3"/>
+                    <TextBox 
                         icon={FaLock}
+                        className="w-full"
                         type="password" 
                         placeholder="password" 
                         onChange={onPasswordChange}
@@ -79,13 +88,20 @@ const AuthView = (props) => {
                             <LoadingSpinner/>
                         </div>
                         :
-                        <Button disabled={!username || !password} special className="w-full" onClick={handleLoginButton}>LOG IN</Button>
+                        <Button 
+                            disabled={!username || !password}  
+                            className="special w-full font-bold" 
+                            icon={FaChevronRight}
+                            onClick={handleLoginButton}>
+                            LOG IN
+                        </Button>
                     }
                     <div className="h-4"/>
                     <div className="text-center">
                         <p className="text-sm underline text-theme hover:text-carolina cursor-pointer">Forgot Password?</p>
                     </div>
                 </div>
+
             </div>
         </>
     );

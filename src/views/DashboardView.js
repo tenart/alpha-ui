@@ -36,7 +36,6 @@ const DashboardView = (props) => {
         logoClasses = `${logoClasses} ml-3`
     } else {
         sidebarClasses = `${sidebarClasses} w-14`
-        // logoClasses = `${logoClasses}`
     }
 
     return (

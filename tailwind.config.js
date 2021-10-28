@@ -5,9 +5,11 @@ module.exports = {
         extend: {
             colors: {
                 "carolina": "#4B9CD3",
-                "carolina": "#4B9CD3",
+                "carolina-light": "#5FAEDC",
+                "carolina-dark": "#3D86BC",
                 "theme": "#436C8E",
-                "theme": "#436C8E",
+                "theme-light": "#497DA1",
+                "theme-dark": "#345A7B",
             },
         },
     },

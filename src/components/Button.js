@@ -1,34 +1,25 @@
 const Button = (props) => {
-    
-    let classes = `
-        p-2
-        px-3
-        rounded
-        shadow-md
-        border
-        box-border
-        h-10
-    `;
 
-    if (props.special) {
-        classes = `${classes} 
-            bg-theme
-            hover:bg-carolina
-            border-blue-900
-            text-white`;
-    } else {
-        classes = `${classes} 
-            bg-gray-200 
-            hover:bg-gray-300`;
+    let className = "button " + props.className;
+
+    if (props.icon) {
+        className = "has-icon " + className;
     }
 
     return(
         <button 
             disabled={props.disabled}
-            className={`${classes} ${props.className}`}
+            className={className}
             onClick={props.onClick}
         >
-            {props.children}
+            {props.icon &&
+                <div className="h-4 w-4 text-current">
+                    <props.icon className="h-full w-full"/>
+                </div>    
+            }
+            <p className="flex-grow">
+                {props.children}
+            </p>
         </button>
     );
     

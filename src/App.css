@@ -1,3 +1,81 @@
-div {
-    @apply text-gray-600;
+/* Set default text color */
+div, p {
+    @apply 
+    text-gray-600;
+}
+
+/* Set default button styles */
+.button {
+    @apply
+    group
+    h-10
+    py-2
+    px-4
+    bg-gray-200
+    border
+    border-gray-300
+    shadow
+    rounded
+    flex
+    items-center
+    justify-center;
+}
+.button:hover {
+    @apply
+    bg-gray-300
+    border-gray-400;
+}
+.button:active {
+    @apply
+    text-white
+    bg-gray-400
+    border-gray-500;
+}
+.button:disabled {
+    @apply
+    opacity-90
+    cursor-not-allowed;
+}
+.button.has-icon {
+    @apply
+    pl-3
+    pr-7
+    !important
+    ;
+}
+
+/* Set special button styles */
+.button.special {
+    @apply
+    text-white
+    bg-theme
+    border-theme-dark;
+}
+.button.special:hover {
+    @apply
+    bg-carolina
+    border-carolina-dark;
+}
+.button.special:active {
+    @apply
+    filter
+    brightness-90;
+}
+
+/* Set default text input styles */
+.text-box {
+    @apply
+    h-10
+    p-2
+    px-3
+    rounded
+    border
+    border-gray-200
+    bg-gray-100
+    ;
+}
+.text-box.has-icon {
+    @apply
+    pl-10
+    ;
 }
