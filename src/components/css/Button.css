@@ -1,0 +1,55 @@
+/* Set default button styles */
+.button {
+    @apply
+    flex-shrink-0
+    group
+    h-10
+    py-2
+    px-3
+    bg-gray-100
+    border
+    border-gray-200
+    rounded
+    flex
+    items-center
+    justify-center;
+}
+.button:hover {
+    @apply
+    shadow
+    bg-gray-200
+    border-gray-300;
+}
+.button:active {
+    @apply
+    bg-gray-300
+    border-gray-400;
+}
+.button:disabled {
+    @apply
+    opacity-75
+    cursor-not-allowed;
+}
+.button.center {
+    @apply 
+    pr-10;
+}
+
+/* Set special button styles */
+.button.special {
+    @apply
+    shadow
+    text-white
+    bg-theme
+    border-theme-dark;
+}
+.button.special:hover {
+    @apply
+    bg-carolina
+    border-carolina-dark;
+}
+.button.special:active {
+    @apply
+    filter
+    brightness-90;
+}

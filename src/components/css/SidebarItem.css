@@ -1,0 +1,45 @@
+.sidebar-item {
+    @apply
+    h-10
+    w-full 
+    rounded-md 
+    flex
+    items-center 
+    overflow-hidden 
+    group
+    hover:bg-gray-100
+    active:bg-gray-200
+    ;
+}
+
+.sidebar-item.active {
+    @apply
+    bg-carolina 
+    text-white 
+    pointer-events-none 
+    font-bold
+    shadow
+    border
+    border-carolina-dark
+    ;
+}
+
+.sidebar-item-icon {
+    @apply
+    h-10 
+    w-10 
+    mr-2
+    my-1 
+    flex 
+    items-center 
+    justify-center 
+    flex-shrink-0 
+    text-current
+    ;
+}
+
+.sidebar-item:hover .sidebar-item-icon {
+    @apply 
+    text-carolina
+    ;
+}

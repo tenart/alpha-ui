@@ -1,0 +1,18 @@
+/* Set default text input styles */
+.text-box {
+    @apply
+    h-10
+    p-2
+    px-3
+    rounded
+    border
+    border-gray-200
+    bg-gray-100
+    shadow-inner
+    ;
+}
+.text-box.has-icon {
+    @apply
+    pl-10
+    ;
+}

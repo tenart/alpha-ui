@@ -1,0 +1,17 @@
+/* Header wrapper styles */
+.header {
+    @apply
+    pb-5
+    pt-10
+    px-5
+    border-b
+    border-gray-200;
+}
+
+/* Header content styles */
+.header-content {
+    @apply 
+    h-10 
+    flex
+    space-x-2;
+}

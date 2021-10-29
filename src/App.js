@@ -1,27 +1,24 @@
+// Import CSS
 import './App.css';
-import React, { useState } from 'react';
+// Import major dependencies
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+// Import components
 import DashboardView from './views/DashboardView';
 import AuthView from './views/AuthView';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom"
+// Import icons
+// Import API and static content
 
 function App() {
-
     return (
         <div className="App"> 
-            <Router>
+            <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={AuthView} />
                     <Route path="/dashboard" component={DashboardView} />  
                 </Switch>
-            </Router>
+            </BrowserRouter>
         </div>
-    );
-    
+    )
 }
 
 export default App;

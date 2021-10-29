@@ -1,0 +1,53 @@
+/* Sidebar styles */
+.sidebar {
+    @apply
+    flex-shrink-0
+    transition-all
+    overflow-hidden
+    p-5
+    pt-10;
+}
+.sidebar.open {
+    @apply
+    w-72;
+}
+.sidebar.closed {
+    @apply
+    w-20;
+}
+
+/* Sidebar logo styles */
+.sidebar-logo {
+    @apply
+    mb-10
+    w-full 
+    flex 
+    items-center 
+    justify-start 
+    rounded-md
+    h-10
+    overflow-hidden
+}
+.sidebar-logo .toggle-button {
+    @apply
+    h-10
+    w-10
+    flex
+    items-center
+    justify-center
+    flex-shrink-0
+}
+.sidebar-logo .toggle-button img {
+    @apply
+    h-7
+    w-7;
+}
+.sidebar-logo .sidebar-logo-type {
+    @apply
+    flex-shrink-0
+}
+.sidebar-logo .sidebar-logo-type img {
+    @apply
+    h-7
+    ml-2
+}

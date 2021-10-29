@@ -54,7 +54,7 @@ const AuthView = (props) => {
     return(
         <>  
             <Helmet>
-                <title>SIMP | Log In</title>
+                <title>Welcome</title>
             </Helmet>
             <Banner show={showError}>
                 Invalid username/password. Please try again.
@@ -64,7 +64,11 @@ const AuthView = (props) => {
                 <div className="bg-white w-80 rounded-md p-5 shadow-lg">
                     <div className="h-10"/>
                     <div className="flex justify-center">
-                        <img src="assets/unc-health-logo.svg" className="w-36"/>
+                        <img 
+                            alt="UNC Health logo"
+                            src="assets/unc-health-logo.svg" 
+                            className="w-36"
+                        />
                     </div>
                     <div className="h-10"/>
                     <div className="h-5"/>
@@ -91,7 +95,7 @@ const AuthView = (props) => {
                         :
                         <Button 
                             disabled={!username || !password}  
-                            className="special w-full font-bold" 
+                            className="special center w-full font-bold" 
                             icon={FaChevronRight}
                             onClick={handleLoginButton}>
                             LOG IN
