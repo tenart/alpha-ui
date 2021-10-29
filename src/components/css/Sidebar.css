@@ -25,7 +25,6 @@
     flex 
     items-center 
     justify-start 
-    rounded-md
     h-10
     overflow-hidden;
 }
@@ -49,7 +48,9 @@
     justify-center
     flex-shrink-0
     group
+    rounded-md
     hover:bg-gray-100
+    active:bg-gray-200
 }
 .toggle-button img {
     @apply

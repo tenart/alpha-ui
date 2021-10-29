@@ -17,18 +17,23 @@ const SidebarItem = (props) => {
     }
 
     return (
-        <button 
-            className={"sidebar-item" + (props.active ? " active" : "")} 
-            onClick={changeDashPage}
-            title={props.title}
-        >
-            <div className="sidebar-item-icon">
-                <props.icon className="h-5 w-5"/>
+        <div className="sidebar-item-wrapper">  
+            <div className="sidebar-tooltip">
+                <p>{props.title}</p>
             </div>
-            <p className="whitespace-nowrap">
-                {props.title}
-            </p>
-        </button>
+            <button 
+                className={"sidebar-item" + (props.active ? " active" : "")} 
+                onClick={changeDashPage}
+                title={props.title}
+            >
+                <div className="sidebar-item-icon">
+                    <props.icon className="h-5 w-5"/>
+                </div>
+                <p className="whitespace-nowrap">
+                    {props.title}
+                </p>
+            </button>
+        </div>
     )
 
 }

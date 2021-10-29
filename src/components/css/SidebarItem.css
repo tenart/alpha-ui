@@ -11,7 +11,6 @@
     active:bg-gray-200
     ;
 }
-
 .sidebar-item.active {
     @apply
     bg-carolina 
@@ -23,7 +22,6 @@
     border-carolina-dark
     ;
 }
-
 .sidebar-item-icon {
     @apply
     h-10 
@@ -37,9 +35,38 @@
     text-current
     ;
 }
-
 .sidebar-item:hover .sidebar-item-icon {
     @apply 
     text-carolina
     ;
+}
+
+.sidebar-tooltip {
+    @apply
+    absolute
+    ml-12
+    h-10
+    bg-white
+    bg-opacity-0
+    backdrop-filter 
+    backdrop-blur
+    rounded
+    flex
+    items-center
+    font-normal
+    overflow-hidden
+    transition-all
+    px-0
+    w-0
+    shadow
+}
+.sidebar-tooltip p {
+    @apply
+    whitespace-nowrap
+}
+
+.sidebar.closed .sidebar-item-wrapper:hover .sidebar-tooltip {
+    @apply
+    w-max
+    px-3
 }

@@ -29,12 +29,18 @@ const DeveloperCardGroup = (props) => {
                 <p>
                     Pick up where you left off...
                 </p>
+                <p>
+                    You last modified this Log Name
+                </p>
+                <p className="text-sm">
+                    Date and Time | Template Name
+                </p>
             </Card>
-
+  
+            {/* <Card></Card>
             <Card></Card>
             <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <Card></Card> */}
         </>
     )
 }
