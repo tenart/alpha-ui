@@ -1,0 +1,17 @@
+.card {
+    @apply
+    bg-white
+    shadow-md
+    p-5
+    rounded-md
+    flex-grow
+    ;
+    min-width: 256px;
+    min-height: 256px;
+}
+
+.dashboard-flex-content .card {
+    @apply
+    mb-5
+    mr-5
+}

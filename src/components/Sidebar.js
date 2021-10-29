@@ -25,6 +25,7 @@ const Sidebar = (props) => {
                     className="toggle-button"
                     title={show ? "hide sidebar" : "show sidebar"}
                 >
+                    <FaChevronRight className="chevron"/>
                     <img alt="Slidedeck logo" src="assets/slidedeck-icon.svg"/>
                 </button>
                 <div className="sidebar-logo-type">

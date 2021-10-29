@@ -5,7 +5,8 @@
     transition-all
     overflow-hidden
     p-5
-    pt-10;
+    pt-10
+    bg-white
 }
 .sidebar.open {
     @apply
@@ -26,9 +27,20 @@
     justify-start 
     rounded-md
     h-10
-    overflow-hidden
+    overflow-hidden;
 }
-.sidebar-logo .toggle-button {
+.sidebar-logo .sidebar-logo-type {
+    @apply
+    flex-shrink-0;
+}
+.sidebar-logo .sidebar-logo-type img {
+    @apply
+    h-7
+    ml-2;
+}
+
+/* Sidebar toggle button styles */
+.toggle-button {
     @apply
     h-10
     w-10
@@ -36,18 +48,37 @@
     items-center
     justify-center
     flex-shrink-0
+    group
+    hover:bg-gray-100
 }
-.sidebar-logo .toggle-button img {
+.toggle-button img {
     @apply
+    absolute
     h-7
-    w-7;
+    w-7
+    transition-opacity
+    opacity-100;
 }
-.sidebar-logo .sidebar-logo-type {
+.toggle-button:hover img {
     @apply
-    flex-shrink-0
+    opacity-0;
 }
-.sidebar-logo .sidebar-logo-type img {
+.toggle-button .chevron {
+    @apply 
+    absolute
+    transform
+    transition-opacity
+    opacity-0;
+}
+.toggle-button:hover .chevron {
     @apply
-    h-7
-    ml-2
+    opacity-100;
+}
+.sidebar.open .chevron {
+    @apply
+    rotate-180;
+}
+.sidebar.closed .chevron {
+    @apply
+    rotate-0;
 }

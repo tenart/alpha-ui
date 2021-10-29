@@ -1,0 +1,13 @@
+.dashboard-flex-content {
+    @apply
+    w-full 
+    pt-5 
+    pl-5 
+    flex
+    flex-wrap 
+    overflow-scroll;
+    height: calc(100%);
+    padding-top: calc(6.25rem + 1.25rem);
+}
+/* 6.25rem */
+/* <div className="h-24 mb-1"/> */
