@@ -11,12 +11,18 @@
     border-gray-100;
 }
 .sidebar.open {
-    @apply
-    w-72;
+    /* @apply
+    w-72;    */
+    /* 18 rem */
+    /* width: 18rem; */
+    width: var(--sidebar-open-w);
 }
 .sidebar.closed {
-    @apply
-    w-20;
+    /* @apply
+    w-20;    */
+    /* 5 rem */
+    /* width: 5rem; */
+    width: var(--sidebar-closed-w);
 }
 
 /* Sidebar logo styles */

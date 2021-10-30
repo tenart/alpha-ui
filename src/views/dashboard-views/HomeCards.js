@@ -11,6 +11,9 @@ const HomeCards = (props) => {
             <Card>
                 <p>This is a test card</p>
             </Card>
+            <Card>
+                <p>This is a another test card</p>
+            </Card>
         </>
     )
 }

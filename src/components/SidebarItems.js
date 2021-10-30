@@ -9,21 +9,21 @@ import FX from './FX';
 
 const SidebarItem = (props) => {
 
+    // For Ripple FX
     const [ripple, setRipple] = useState(FX.Ripple.util.defaultState());
-    const ref = useRef();
-    
+    const buttonRef = useRef();
     const onMouseDown = (e) => {
-        setRipple(FX.Ripple.util.startState(e, ref));
+        setRipple(FX.Ripple.util.startState(e, buttonRef));
     }
     const onMouseUp = (e) => {
-        setRipple(FX.Ripple.util.stopState(e, ref));
+        setRipple(FX.Ripple.util.stopState(e, buttonRef));
     }
-
-    const changeDashPage = () => {
+    // End Ripple FX
+    const changeDashboardPage = () => {
         props.setDashboardState((state) => {
             const newState = { ...state };
-            newState.active = props.index;
-            newState.title = props.title;
+            newState.active.i = props.index;
+            newState.active.title = props.title;
             return newState;
         })
     }
@@ -35,12 +35,12 @@ const SidebarItem = (props) => {
             </div>
             <button 
                 className={"sidebar-item" + (props.active ? " active" : "")} 
-                onClick={changeDashPage}
+                onClick={changeDashboardPage}
                 title={props.title}
                 onMouseDown={onMouseDown}
                 onMouseUp={onMouseUp}
                 onMouseLeave={onMouseUp}
-                ref={ref}
+                ref={buttonRef}
             >
                 <FX.Ripple.Component state={ripple}/>
                 <div className="sidebar-item-icon">

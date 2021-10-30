@@ -9,16 +9,16 @@ import FX from "./FX";
 
 const Button = (props) => {
 
+    // For Ripple FX
     const [ripple, setRipple] = useState(FX.Ripple.util.defaultState());
     const ref = useRef();
-    
     const onMouseDown = (e) => {
         setRipple(FX.Ripple.util.startState(e, ref));
     }
     const onMouseUp = (e) => {
         setRipple(FX.Ripple.util.stopState(e, ref));
     }
-
+    // End Ripple FX
     return(
         <button 
             ref={ref}

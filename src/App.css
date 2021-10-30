@@ -3,6 +3,11 @@ div {
     @apply 
     text-gray-600;
 }
+.subtitle {
+    @apply 
+    text-sm
+    text-gray-400;
+}
 /* Set body background color */
 body {
     @apply

@@ -2,10 +2,11 @@
 .card {
     @apply
     bg-white
-    shadow-md
     p-5
-    rounded-md
+    rounded
     flex-grow
+    border
+    border-gray-100
     ;
     min-width: 256px;
     min-height: 256px;
@@ -19,7 +20,10 @@
 /* Card styling when only child */
 .dashboard-flex-content .card:only-child {
     @apply
-    bg-transparent
-    shadow-none
-    ;
+    bg-white
+    border-none
+    -mt-5
+    -ml-5
+    mr-0
+    mb-0;
 }

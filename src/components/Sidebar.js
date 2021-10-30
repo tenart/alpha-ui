@@ -9,7 +9,6 @@ import { FaChevronRight } from "react-icons/fa";
 
 const Sidebar = (props) => {
 
-    const [show, setShow] = useState(false);
     const [ripple, setRipple] = useState(FX.Ripple.util.defaultState());
     const ref = useRef();
     
@@ -20,18 +19,20 @@ const Sidebar = (props) => {
         setRipple(FX.Ripple.util.stopState(e, ref));
     }
     const toggleSidebar = () => {
-        setShow((show) => {
-            return !show;
+        props.setDashboardState((state) => {
+            const newState = { ...state };
+            newState.sidebarShow = !state.sidebarShow;
+            return newState;
         });
     }
     
     return (
-        <div className={"sidebar " + (show ?  "open" : "closed")}>
+        <div className={"sidebar " + (props.show ?  "open" : "closed")}>
             {/* Blue corner */}
             <div className="sidebar-logo">
                 <button 
                     className="toggle-button"
-                    title={show ? "hide sidebar" : "show sidebar"}
+                    title={props.show ? "hide sidebar" : "show sidebar"}
                     onClick={toggleSidebar} 
                     onMouseDown={onMouseDown}
                     onMouseUp={onMouseUp}
