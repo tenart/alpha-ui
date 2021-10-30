@@ -1,3 +1,4 @@
+/* Sidebar item styles */
 .sidebar-item {
     @apply
     h-10
@@ -6,21 +7,20 @@
     flex
     items-center 
     overflow-hidden 
-    group
-    hover:bg-gray-100
-    active:bg-gray-200
-    ;
+    transition-all
+    hover:bg-gray-500
+    hover:bg-opacity-10;
+}
+.sidebar-item:active {
+    @apply
+    bg-opacity-20;
 }
 .sidebar-item.active {
     @apply
     bg-carolina 
     text-white 
     pointer-events-none 
-    font-bold
-    shadow
-    border
-    border-carolina-dark
-    ;
+    shadow;
 }
 .sidebar-item-icon {
     @apply
@@ -37,19 +37,19 @@
 }
 .sidebar-item:hover .sidebar-item-icon {
     @apply 
-    text-carolina
-    ;
+    text-carolina;
 }
-
+.sidebar-item.active .sidebar-item-icon {
+    @apply 
+    text-white;
+}
+/* Sidebar tooltip styles */
 .sidebar-tooltip {
     @apply
-    absolute
+    fixed
+    z-50
     ml-12
     h-10
-    bg-white
-    bg-opacity-0
-    backdrop-filter 
-    backdrop-blur
     rounded
     flex
     items-center
@@ -58,15 +58,18 @@
     transition-all
     px-0
     w-0
+    opacity-0
     shadow
+    bg-white
+    ;
 }
 .sidebar-tooltip p {
     @apply
-    whitespace-nowrap
+    whitespace-nowrap;
 }
-
 .sidebar.closed .sidebar-item-wrapper:hover .sidebar-tooltip {
     @apply
     w-max
     px-3
+    opacity-100;
 }

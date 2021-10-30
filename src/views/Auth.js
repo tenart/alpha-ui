@@ -12,7 +12,7 @@ import { FaUserAlt, FaLock, FaChevronRight } from "react-icons/fa";
 // Import API
 import api from "../api";
 
-const AuthView = (props) => {
+const Authentication = (props) => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -62,15 +62,15 @@ const AuthView = (props) => {
             <div className="bg-gray-100 absolute h-full w-full flex flex-col items-center justify-center">
 
                 <div className="bg-white w-80 rounded-md p-5 shadow-lg">
-                    <div className="h-10"/>
+                    <div className="h-12"/>
                     <div className="flex justify-center">
                         <img 
                             alt="UNC Health logo"
-                            src="assets/unc-health-logo.svg" 
-                            className="w-36"
+                            src="assets/slidedeck-logo.svg" 
+                            className="w-52"
                         />
                     </div>
-                    <div className="h-10"/>
+                    <div className="h-12"/>
                     <div className="h-5"/>
                     <TextBox 
                         icon={FaUserAlt}
@@ -101,7 +101,7 @@ const AuthView = (props) => {
                             LOG IN
                         </Button>
                     }
-                    <div className="h-2"/>
+                    <div className="h-5"/>
                     <div className="text-center">
                         <p className="text-sm underline text-theme hover:text-carolina cursor-pointer">Forgot Password?</p>
                     </div>
@@ -112,4 +112,4 @@ const AuthView = (props) => {
     );
 }
 
-export default AuthView;
+export default Authentication;

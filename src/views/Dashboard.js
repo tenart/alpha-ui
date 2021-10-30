@@ -8,44 +8,13 @@ import Card from "../components/Card";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import SidebarItem from "../components/SidebarItems";
+import HomeCards from "./dashboard-views/HomeCards";
+import DeveloperCards from "./dashboard-views/DeveloperCards";
 // Import icons
 // Import API and static content
 import dashboardItems from "../static/dashboardItems";
 
-const HomeCardGroup = (props) => {
-    return (
-        <>
-            <Card>
-                <p>This is a test card</p>
-            </Card>
-        </>
-    )
-}
-
-const DeveloperCardGroup = (props) => {
-    return (
-        <>
-            <Card>
-                <p>
-                    Pick up where you left off...
-                </p>
-                <p>
-                    You last modified this Log Name
-                </p>
-                <p className="text-sm">
-                    Date and Time | Template Name
-                </p>
-            </Card>
-  
-            {/* <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card> */}
-        </>
-    )
-}
-
-const DashboardView = (props) => {
+const Dashboard = (props) => {
 
     const [dashboardState, setDashboardState] = useState({ 
         active: 0,
@@ -53,13 +22,12 @@ const DashboardView = (props) => {
     });
 
     let content = <></>;
-
     switch (dashboardState.title) {
         case "Home":
-            content = <HomeCardGroup/>;
+            content = <HomeCards/>;
             break;
         case "Developer Area":
-            content = <DeveloperCardGroup/>;
+            content = <DeveloperCards/>;
             break;
         default:
             content = <></>;
@@ -89,17 +57,19 @@ const DashboardView = (props) => {
                         )})}
                     </div>
                 </Sidebar>
+                {/* End sidebar */}
                 {/* Main content */}
-                <div className="border-l border-gray-200 flex-grow">
+                <div className="flex-grow">
                     <Header/>
                     <div className="dashboard-flex-content">
                         {content}
                     </div>
                 </div>
+                {/* End main content */}
             </div>
         </>
             
     )
 }
 
-export default DashboardView;
+export default Dashboard;
