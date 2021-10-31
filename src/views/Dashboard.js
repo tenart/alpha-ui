@@ -24,9 +24,9 @@ const Dashboard = (props) => {
     const defaultState = {
         active: {
             i: 0,
-            title: "Developer Area"
+            title: dashboardItems[0].title
         },
-        sidebarShow: false,
+        sidebarShow: true,
         sidebarOpenWidth: "18rem",
         sidebarClosedWidth: "5rem",
         headerHeight: "6.25rem"

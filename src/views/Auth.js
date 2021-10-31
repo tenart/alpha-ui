@@ -1,3 +1,5 @@
+// Import CSS
+import "./css/Auth.css";
 // Import major dependencies
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom"
@@ -58,15 +60,19 @@ const Authentication = (props) => {
             <Banner show={showError}>
                 Invalid username/password. Please try again.
             </Banner>
-            <div className="bg-gray-100 absolute h-full w-full flex flex-col items-center justify-center">
-
-                <div className="bg-white w-80 rounded-md p-5 shadow-lg">
+            <div className="auth-background">
+                <div className="auth-card">
                     <div className="h-12"/>
                     <div className="flex justify-center">
                         <img 
-                            alt="UNC Health logo"
+                            alt="Slidedeck logo"
                             src="assets/slidedeck-logo.svg" 
-                            className="w-52"
+                            className="w-52 light-logo"
+                        />
+                        <img 
+                            alt="Slidedeck logo"
+                            src="assets/slidedeck-logo-w.svg" 
+                            className="w-52 dark-logo"
                         />
                     </div>
                     <div className="h-12"/>
@@ -105,7 +111,6 @@ const Authentication = (props) => {
                         <p className="text-sm underline text-theme hover:text-carolina cursor-pointer">Forgot Password?</p>
                     </div>
                 </div>
-
             </div>
         </>
     );
