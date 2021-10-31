@@ -42,7 +42,6 @@ const Authentication = (props) => {
     }
 
     const onSuccess = (data) => {
-        console.log(data);
         setLoading(false);
         if (data.result) {
             history.push("/dashboard");
