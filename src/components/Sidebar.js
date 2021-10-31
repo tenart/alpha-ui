@@ -1,17 +1,18 @@
 // Import CSS
 import "./css/Sidebar.css";
 // Import major dependencies
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 // Import components
+import { DashboardContext } from "../views/Dashboard";
 import FX from './FX';
 // Import icons
 import { FaChevronRight } from "react-icons/fa";
 
 const Sidebar = (props) => {
-
+    
+    const dashboardContext = useContext(DashboardContext)
     const [ripple, setRipple] = useState(FX.Ripple.util.defaultState());
     const ref = useRef();
-    
     const onMouseDown = (e) => {
         setRipple(FX.Ripple.util.startState(e, ref));
     }
@@ -19,13 +20,12 @@ const Sidebar = (props) => {
         setRipple(FX.Ripple.util.stopState(e, ref));
     }
     const toggleSidebar = () => {
-        props.setDashboardState((state) => {
+        dashboardContext.setState((state) => {
             const newState = { ...state };
             newState.sidebarShow = !state.sidebarShow;
             return newState;
         });
     }
-    
     return (
         <div className={"sidebar " + (props.show ?  "open" : "closed")}>
             {/* Blue corner */}

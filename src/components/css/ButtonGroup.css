@@ -42,3 +42,7 @@
     text-white
     shadow;
 }
+.button-group .button-wrapper.active .icon {
+    @apply
+    text-current;
+}

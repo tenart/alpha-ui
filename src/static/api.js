@@ -2,8 +2,12 @@ import axios from "axios";
 
 const url = "http://comp-523-api-aghayes.apps.cloudapps.unc.edu";
 
+/** Async Axios API calls in one neat callable object.
+ *  @example
+ *  // Get a list of templates
+ *  api.get_template(token, resultHandler);
+ *  */ 
 const api = {
-
     put_login: (user, callback) => {
         const path = `${url}/login`;
         axios

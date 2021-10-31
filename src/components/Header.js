@@ -7,6 +7,7 @@ import Button from "./Button";
 import TextBox from "./TextBox";
 import ThemeSwitcher from "./ThemeSwitcher";
 // Import icons
+import { FaSearch } from "react-icons/fa";
 // Import API and static content
 
 const Header = (props) => {
@@ -15,11 +16,10 @@ const Header = (props) => {
         <div className="header">
             <div className="header-content">
                 <ThemeSwitcher/>
-                <Button>
+                <TextBox icon={FaSearch} placeholder="Search..."/>
+                <Button icon={FaSearch}>
                     Test Button
                 </Button>
-                <TextBox/>
-
             </div>
         </div>
     )

@@ -26,7 +26,7 @@ const TextBox = (props) => {
     }
 
     return (
-        <div>  
+        <div className="text-box-wrapper">  
             <input
                 value={props.value}
                 onFocus={onFocus}
@@ -37,8 +37,8 @@ const TextBox = (props) => {
                 className={className}
             />
             {props.icon &&
-                <div className="h-10 w-10 relative -mt-10 flex justify-center items-center">
-                    <props.icon className={`h-4 w-4 ${focus ? "text-gray-500": "text-gray-400"}`}/>
+                <div className={`icon ${focus ? "focus": ""} h-10 w-10 relative -mt-10 flex justify-center items-center`}>
+                    <props.icon className="h-4 w-4"/>
                 </div>
             }
         </div>

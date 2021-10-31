@@ -25,7 +25,7 @@ const HomeCards = (props) => {
                 <p className="text-lg font-bold">See logs you've been working on</p>
                 <div className="h-5"/>
 
-                <div className="bg-gray-500 bg-opacity-5 p-5 rounded">
+                <div className="backdrop">
                     <div className="flex items-center">
                         <FaThumbsUp className="h-4 w-4 mr-2 text-gray-400"/>
                         <div className="ml-2 pl-4 border-l-2 border-gray-200">

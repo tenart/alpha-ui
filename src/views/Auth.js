@@ -6,11 +6,11 @@ import { Helmet } from 'react-helmet-async';
 import Banner from "../components/Banner";
 import Button from "../components/Button";
 import TextBox from "../components/TextBox";
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadSpinner from "../components/LoadSpinner";
 // Import icons
 import { FaUserAlt, FaLock, FaChevronRight } from "react-icons/fa";
 // Import API
-import api from "../api";
+import api from "../static/api";
 
 const Authentication = (props) => {
 
@@ -90,7 +90,7 @@ const Authentication = (props) => {
                     <div className="h-5"/>
                     {loading ? 
                         <div className="w-full flex justify-center items-center h-10">
-                            <LoadingSpinner/>
+                            <LoadSpinner/>
                         </div>
                         :
                         <Button 

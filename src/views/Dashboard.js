@@ -1,7 +1,7 @@
 // Import CSS
 import "./css/Dashboard.css";
 // Import major dependencies
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 // import { Helmet } from "react-helmet";
 import { Helmet } from 'react-helmet-async';
 import Card from "../components/Card";
@@ -14,19 +14,24 @@ import DeveloperCards from "./dashboard-views/DeveloperCards";
 // Import icons
 // Import API and static content
 import dashboardItems from "../static/dashboardItems";
+import storage from "../static/storage";
+// import storage from "../static/storage";
+
+export const DashboardContext = createContext();
 
 const Dashboard = (props) => {
-
-    const [dashboardState, setDashboardState] = useState({ 
+    
+    const defaultState = {
         active: {
-            i: 4,
+            i: 0,
             title: "Developer Area"
         },
         sidebarShow: false,
         sidebarOpenWidth: "18rem",
         sidebarClosedWidth: "5rem",
         headerHeight: "6.25rem"
-    });
+    }
+    const [dashboardState, setDashboardState] = useState(storage.get("dashboard") === undefined ? defaultState : storage.get("dashboard"));
     const [dashboardContent, setDashboardContent] = useState(<></>);
     // Update CSS variables to resize sidebar
     const updateCSSProps = () => {
@@ -69,11 +74,17 @@ const Dashboard = (props) => {
     useEffect(() => {
         updateDashboardContent(dashboardState.active.title);
         updateCSSProps();
+        storage.set("dashboard", dashboardState);
+        console.log(storage.getKeys());
+        storage.remove("test");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dashboardState])
 
     return (
-        <>
+        <DashboardContext.Provider value={{
+            state: dashboardState,
+            setState: setDashboardState
+        }}>
             <Helmet>
                 <title>
                     {dashboardState.active.title}
@@ -81,7 +92,7 @@ const Dashboard = (props) => {
             </Helmet>
             <div className={"dashboard" + (dashboardState.sidebarShow ? " show-sidebar" : "")}>
                 {/* Sidebar */}
-                <Sidebar show={dashboardState.sidebarShow} setDashboardState={setDashboardState}>
+                <Sidebar show={dashboardState.sidebarShow}>
                     <div className="space-y-2">
                         {dashboardItems.map((item, i) => {return(
                             <SidebarItem 
@@ -105,7 +116,7 @@ const Dashboard = (props) => {
                 </div>
                 {/* End main content */}
             </div>
-        </>
+        </DashboardContext.Provider>
             
     )
 }

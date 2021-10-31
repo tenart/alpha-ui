@@ -18,5 +18,13 @@
     transition-all;
     height: calc(100% - var(--header-h));
     width: calc(100vw - var(--sidebar-w));
-    margin-top: calc(6.25rem);
+    margin-top: var(--header-h);
 }
+
+/* .card .backdrop {
+    @apply
+    bg-red-100
+    bg-opacity-5 
+    p-5 
+    rounded;
+} */

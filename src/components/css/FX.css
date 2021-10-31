@@ -6,9 +6,9 @@
     overflow-hidden
     z-0
     ml-0
-    mt-0
-    rounded;
+    mt-0;
     z-index: 9;
+    border-radius: inherit;
 }
 .button.center .ripple-wrapper {
     @apply
@@ -19,7 +19,7 @@
     h-4
     w-4
     rounded-full
-    bg-carolina-light;
+    bg-carolina;
     animation: ripple 1s;
     opacity: 0;
 }

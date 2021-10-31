@@ -6,18 +6,19 @@ import { Helmet } from "react-helmet-async";
 // Import icons
 // Import API and static content
 import themes from "../static/themes";
+import storage from "../static/storage";
 
 
 const ThemeContext = createContext();
 
 const ThemeProvider = (props) => {
 
-    const initTheme = themes[0];
-    const [theme, setTheme] = useState(initTheme);
+    const defaultTheme = (storage.get("theme") === undefined) ? props.theme : storage.get("theme");
+    const [theme, setTheme] = useState(defaultTheme);
     /**
      * Adds/remove the appropriate theme classes 
      * to root <html> element.
-     * @param {string} theme Unique string of new theme
+     * @param {Object} theme Unique string of new theme
      */
     const updateThemeClasses = (theme) => {
         const html = window.document.documentElement;
@@ -27,6 +28,7 @@ const ThemeProvider = (props) => {
         html.classList.add(theme.id);
     }
     useEffect(() => {
+        storage.set("theme", theme);
         updateThemeClasses(theme);
     }, [theme]);
 

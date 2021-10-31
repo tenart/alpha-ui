@@ -7,7 +7,7 @@ import React from "react";
 
 import { CgSpinner } from "react-icons/cg";
 
-const LoadingSpinner = (props) => {
+const LoadSpinner = (props) => {
 
     return (
         <div className="w-8 h-8 animate-spin">
@@ -17,4 +17,4 @@ const LoadingSpinner = (props) => {
 
 }
 
-export default LoadingSpinner;
+export default LoadSpinner;

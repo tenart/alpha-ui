@@ -1,7 +1,7 @@
 // Import CSS
 import "./css/ButtonGroup.css";
 // Import major dependencies
-import React, { useState } from "react";
+import React from "react";
 // Import components
 
 // Import icons
@@ -9,7 +9,8 @@ import React, { useState } from "react";
 
 const ButtonGroup = (props) => {
 
-    const [active, setActive] = useState(props.active ? props.active : 0);
+    // const [active, setActive] = useState(props.active ? props.active : 0);
+    const active = props.active ? props.active : 0;
 
     return(
         <div className="button-group">
@@ -17,7 +18,7 @@ const ButtonGroup = (props) => {
                 <div 
                     key={i} 
                     className={"button-wrapper " + (i === active ? "active" : "")}
-                    onClick={() => {setActive(i)}}
+                    // onClick={() => {setActive(i)}}
                 >
                     {button}
                 </div>

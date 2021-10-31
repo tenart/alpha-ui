@@ -15,7 +15,7 @@ const App = () => {
 
     return(
         <HelmetProvider>
-            <Theme.Provider>
+            <Theme.Provider theme={Theme.list[1]}>
                 <div className="App"> 
                     <BrowserRouter>
                         <Switch>
