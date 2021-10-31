@@ -1,7 +1,7 @@
 // Import major dependencies
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom"
-import { useState } from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 // Import components
 import Banner from "../components/Banner";
 import Button from "../components/Button";

@@ -1,12 +1,11 @@
 // Import CSS
 // Import major dependencies
-import { useContext } from "react";
+import React, { useContext } from "react";
 // Import components
 import Theme from "./Theme";
 import Button from "./Button";
 import ButtonGroup from "./ButtonGroup";
 // Import icons
-import { FaSun, FaMoon } from "react-icons/fa";
 // Import API and static content
 
 const ThemeSwitcher = (props) => {

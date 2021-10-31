@@ -1,4 +1,10 @@
+// Import CSS
+// Import major dependencies
+import React from "react";
+// Import components
+// Import icons
 import { MdError } from "react-icons/md";
+// Import API and static content
 
 const Banner = (props) => {
 

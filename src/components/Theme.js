@@ -1,6 +1,6 @@
 // Import CSS
 // Import major dependencies
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 // Import components
 // Import icons
 // Import API and static content

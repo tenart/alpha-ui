@@ -1,7 +1,7 @@
 // Import CSS
 import "./css/FX.css"
 // Import major dependencies
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 // Import components
 // Import icons
 // Import API and static content
@@ -47,6 +47,7 @@ const Ripple = (props) => {
                 setShowing(true);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rippleState.show])
 
     return(

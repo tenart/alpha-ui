@@ -1,8 +1,9 @@
 // Import CSS
 import "./css/Dashboard.css";
 // Import major dependencies
-import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import React, { useEffect, useState } from "react";
+// import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import Card from "../components/Card";
 // Import components
 import Header from "../components/Header";
@@ -68,6 +69,7 @@ const Dashboard = (props) => {
     useEffect(() => {
         updateDashboardContent(dashboardState.active.title);
         updateCSSProps();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dashboardState])
 
     return (

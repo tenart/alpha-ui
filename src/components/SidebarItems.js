@@ -1,7 +1,7 @@
 // Import CSS
 import './css/SidebarItem.css';
 // Import major dependencies
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 // Import components
 import FX from './FX';
 // Import icons

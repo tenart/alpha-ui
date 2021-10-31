@@ -1,5 +1,6 @@
 // Import CSS
 // Import major dependencies
+import React from "react";
 // Import components
 import Card from "../../components/Card";
 import Button from "../../components/Button";

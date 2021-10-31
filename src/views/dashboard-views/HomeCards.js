@@ -1,5 +1,6 @@
 // Import CSS
 // Import major dependencies
+import React from "react";
 // Import components
 import Card from "../../components/Card";
 import Button from "../../components/Button";
@@ -43,9 +44,12 @@ const HomeCards = (props) => {
                     Browse All Logs
                 </Button>
             </Card>
-            <Card>
+
+
+
+            {/* <Card>
                 <p>This is a another test card</p>
-            </Card>
+            </Card> */}
         </>
     )
 }

@@ -1,7 +1,7 @@
 // Import CSS
-import { useState } from "react";
 import "./css/ButtonGroup.css";
 // Import major dependencies
+import React, { useState } from "react";
 // Import components
 
 // Import icons

@@ -1,7 +1,7 @@
 // Import CSS
 import "./css/TextBox.css";
 // Import major dependencies
-import { useState } from "react";
+import React, { useState } from "react";
 // Import components
 // Import icons
 // Import API

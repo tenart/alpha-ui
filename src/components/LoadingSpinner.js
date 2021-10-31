@@ -1,3 +1,10 @@
+// Import CSS
+// Import major dependencies
+import React from "react";
+// Import components
+// Import icons
+// Import API and static content
+
 import { CgSpinner } from "react-icons/cg";
 
 const LoadingSpinner = (props) => {
