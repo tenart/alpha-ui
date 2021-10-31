@@ -75,8 +75,6 @@ const Dashboard = (props) => {
         updateDashboardContent(dashboardState.active.title);
         updateCSSProps();
         storage.set("dashboard", dashboardState);
-        console.log(storage.getKeys());
-        storage.remove("test");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dashboardState])
 
