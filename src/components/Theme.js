@@ -1,6 +1,7 @@
 // Import CSS
 // Import major dependencies
 import React, { createContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 // Import components
 // Import icons
 // Import API and static content
@@ -34,6 +35,9 @@ const ThemeProvider = (props) => {
             theme: theme,
             setTheme: setTheme
         }}>
+            <Helmet>
+                <meta name="theme-color" content={theme.color}/>
+            </Helmet>
             {props.children}
         </ThemeContext.Provider>
     )

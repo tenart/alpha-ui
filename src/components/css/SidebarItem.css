@@ -16,7 +16,8 @@
 }
 .light .sidebar-item:active {
     @apply
-    bg-gray-400;
+    bg-gray-400
+    bg-opacity-50;
 }
 .dark .sidebar-item:hover {
     @apply
