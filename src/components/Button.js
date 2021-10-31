@@ -31,7 +31,7 @@ const Button = (props) => {
         >   
             <FX.Ripple.Component state={ripple}/>
             {props.icon &&
-                <div className="h-4 w-4 mr-2 text-current">
+                <div className="icon h-4 w-4 mr-2 text-current">
                     <props.icon className="h-full w-full"/>
                 </div>    
             }

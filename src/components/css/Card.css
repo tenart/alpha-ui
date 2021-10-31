@@ -1,15 +1,13 @@
 /* Standalone card styling */
 .card {
     @apply
-    bg-white
     p-5
     rounded
     flex-grow
-    border
-    border-gray-100
-    ;
-    min-width: 256px;
-    min-height: 256px;
+    
+    w-min;
+    /* min-width: 256px;
+    min-height: 256px; */
 }
 /* Card styling when inside a flex arrangement */
 .dashboard-flex-content .card {
@@ -20,7 +18,6 @@
 /* Card styling when only child */
 .dashboard-flex-content .card:only-child {
     @apply
-    bg-white
     border-none
     -mt-5
     -ml-5

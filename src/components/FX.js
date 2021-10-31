@@ -54,7 +54,7 @@ const Ripple = (props) => {
             style={css.wrapper}
         >
             <div 
-                className={showing && "rippler"}
+                className={showing ? "rippler" : ""}
                 style={css.rippler}
             />
         </div>
@@ -140,15 +140,6 @@ const rippleGetStopState = (e, ref) => {
     return {...stopState};
 }
 
-// Test component
-const Test = (props) => {
-    return(
-        <div>
-            Hello WOrld
-        </div>
-    )
-}
-
 // FX export object
 const FX = {
     Ripple: {
@@ -158,9 +149,6 @@ const FX = {
             startState: rippleGetStartState,
             stopState: rippleGetStopState
         }
-    },
-    Test: {
-        Component: Test
     }
 }
 

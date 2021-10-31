@@ -1,7 +1,11 @@
-/* Set default text color */
-div {
+/* Set default text colors */
+.light div {
     @apply 
     text-gray-600;
+}
+.dark div {
+    @apply 
+    text-white;
 }
 .subtitle {
     @apply 
@@ -12,4 +16,13 @@ div {
 body {
     @apply
     overflow-hidden;
+    transition: background-color 0.5s;
+}
+.light body {
+    @apply
+    bg-white;
+}
+.dark body {
+    @apply
+    bg-gray-800;
 }

@@ -6,8 +6,15 @@
     pb-5
     pt-10
     px-5
-    border-b
+    border-b;
+}
+.light .header {
+    @apply
     border-gray-100;
+}
+.dark .header {
+    @apply
+    border-gray-900;
 }
 /* Header content styles */
 .header-content {

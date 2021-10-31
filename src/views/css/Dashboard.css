@@ -15,8 +15,7 @@
     flex
     flex-wrap 
     overflow-scroll
-    transition-all
-    bg-gray-50;
+    transition-all;
     height: calc(100% - var(--header-h));
     width: calc(100vw - var(--sidebar-w));
     margin-top: calc(6.25rem);

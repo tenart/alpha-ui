@@ -1,0 +1,44 @@
+.button-group {
+    @apply 
+    h-10
+    flex
+    w-min
+    space-x-1
+    rounded
+    p-1;
+}
+.light .button-group {
+    @apply
+    bg-gray-200
+    bg-opacity-50;
+}
+.dark .button-group {
+    @apply
+    bg-gray-900
+    bg-opacity-50;
+}
+.button-group .button {
+    @apply
+    rounded-sm
+    relative
+    bg-transparent
+    h-8;
+}
+.button-group .button-wrapper:first-child .button {
+    @apply
+    rounded-l;
+}
+.button-group .button-wrapper:last-child .button {
+    @apply
+    rounded-r;
+}
+.button-group .button:hover {
+    @apply
+    z-30;
+}
+.button-group .button-wrapper.active .button {
+    @apply
+    bg-carolina
+    text-white
+    shadow;
+}
